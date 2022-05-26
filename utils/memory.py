@@ -1,4 +1,4 @@
-iimport numpy as np
+import numpy as np
 
 def reduce_mem_usage(df, verbose=False):
     """
