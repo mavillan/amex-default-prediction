@@ -1,8 +1,10 @@
 import numpy as np
 import pandas as pd
+import numba
 
 # took from: https://www.kaggle.com/code/rohanrao/amex-competition-metric-implementations
 
+@numba.njit()
 def compute_recall_at4(y_true: np.array, y_pred: np.array) -> float:
     
     # count of positives and negatives
@@ -23,6 +25,7 @@ def compute_recall_at4(y_true: np.array, y_pred: np.array) -> float:
     
     return d
 
+@numba.njit()
 def compute_normalized_gini(y_true: np.array, y_pred: np.array) -> float:
     
     # count of positives and negatives
@@ -47,7 +50,8 @@ def compute_normalized_gini(y_true: np.array, y_pred: np.array) -> float:
     g = gini / gini_max
     
     return g
-    
+
+@numba.njit()
 def compute_amex_metric(y_true: np.array, y_pred: np.array) -> float:
 
     # count of positives and negatives
