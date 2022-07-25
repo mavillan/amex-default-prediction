@@ -1,0 +1,4 @@
+[core]
+    remote = hardcore-euler
+['remote "hardcore-euler"']
+    url = gs://hardcore-euler-dvc-remote
