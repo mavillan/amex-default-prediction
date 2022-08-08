@@ -1,0 +1,4 @@
+outs:
+- md5: f678c29f7b7635ed5aa1a19421213ec5
+  size: 432
+  path: lgbm-bce-dsv04.yml
